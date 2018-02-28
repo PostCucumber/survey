@@ -5,6 +5,7 @@
         <div class="container" style="margin-left: auto;margin-right: auto;margin-top:8rem;width:80%;">
             <p style="text-align:center">{{ $question }} </p>
             <form method="post" action="/feedback/submit" accept-charset="UTF-8" style="width:auto">
+                {{ csrf_field() }}
                 <input type="radio"  name="rating"  value="1" style="margin-left:auto;margin:right">😔
                 <input type="radio"  name="rating"  value="2" style="margin-left:auto;margin:right">😕
                 <input type="radio"  name="rating"  value="3" style="margin-left:auto;margin:right">😐
