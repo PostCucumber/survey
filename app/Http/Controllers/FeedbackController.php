@@ -23,6 +23,7 @@ class FeedbackController extends Controller
     public function create(Survey $survey)
     {
         $survey_id = $survey->id;
-        return view('feedback', compact('survey_id','response'));
+        $question  = $survey->question;
+        return view('feedback', compact('survey_id','response','question'));
     }
 }
