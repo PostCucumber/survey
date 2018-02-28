@@ -8,7 +8,8 @@
             </button></a>
         </div>
         <div class="container" style="margin-left: auto;margin-right: auto;margin-top:8rem;width:80%;">
-            <form method="get" action="/submit" accept-charset="UTF-8">
+            <form method="post" action="/submit" accept-charset="UTF-8">
+                {{ csrf_field() }}
                 <input type="question" name="question" style="width:100%;font-size:2rem;border:1px solid #222222;padding:.5rem;">
                 <button type="submit" style="width:100%;margin-top:.5rem;padding:1rem;margin-left:auto;margin-right:auto;background:#222222;border:none" >
                     <span style="font-size:1.5rem;color:white;">Add Survey Question</span>

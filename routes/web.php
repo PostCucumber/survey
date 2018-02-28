@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index'); 
 
 
+Route::post('/submit', 'SurveysController@store');
+Route::post('/feedback/submit', 'FeedbackController@store');
 
 Route::get('/survey/{survey}/feedback', 'FeedbackController@create');
 
-Route::get('/submit', 'SurveysController@store');
-Route::get('feedback/submit', 'FeedbackController@store');

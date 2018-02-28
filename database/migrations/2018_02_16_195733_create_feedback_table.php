@@ -16,7 +16,9 @@ class CreateFeedbackTable extends Migration
         Schema::create('feedback', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('survey_id')->index();
-            $table->boolean('response')->default(0);
+            $table->unsignedInteger('rating');
+            $table->text('message');
+            $table->string('sender');
             $table->timestamps();
         });
     }

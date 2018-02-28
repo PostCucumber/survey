@@ -15,6 +15,6 @@ class SurveysController extends Controller
      */
     public function store(Request $request) {
         $survey = Survey::create($request->all());
-        return back();
+        return view('home');
     }
 }

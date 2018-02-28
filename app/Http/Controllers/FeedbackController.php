@@ -24,6 +24,6 @@ class FeedbackController extends Controller
     {
         $survey_id = $survey->id;
         $question  = $survey->question;
-        return view('feedback', compact('survey_id','response','question'));
+        return view('feedback', compact('survey_id','question'));
     }
 }

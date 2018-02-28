@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Feedback extends Model
 {
-    protected $fillable = ['survey_id','feedback'];
+    protected $fillable = ['survey_id','rating','message','sender'];
 
     /**
      * feedback belongs to a survey.
